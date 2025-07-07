@@ -1,0 +1,15 @@
+C:\Users\rober\Documents\workarea\alura-c#-primeira-aplicacao\bin\Debug\net9.0\alura-c#-primeira-aplicacao.exe
+C:\Users\rober\Documents\workarea\alura-c#-primeira-aplicacao\bin\Debug\net9.0\alura-c#-primeira-aplicacao.deps.json
+C:\Users\rober\Documents\workarea\alura-c#-primeira-aplicacao\bin\Debug\net9.0\alura-c#-primeira-aplicacao.runtimeconfig.json
+C:\Users\rober\Documents\workarea\alura-c#-primeira-aplicacao\bin\Debug\net9.0\alura-c#-primeira-aplicacao.dll
+C:\Users\rober\Documents\workarea\alura-c#-primeira-aplicacao\bin\Debug\net9.0\alura-c#-primeira-aplicacao.pdb
+C:\Users\rober\Documents\workarea\alura-c#-primeira-aplicacao\obj\Debug\net9.0\alura-c#-primeira-aplicacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rober\Documents\workarea\alura-c#-primeira-aplicacao\obj\Debug\net9.0\alura-c#-primeira-aplicacao.AssemblyInfoInputs.cache
+C:\Users\rober\Documents\workarea\alura-c#-primeira-aplicacao\obj\Debug\net9.0\alura-c#-primeira-aplicacao.AssemblyInfo.cs
+C:\Users\rober\Documents\workarea\alura-c#-primeira-aplicacao\obj\Debug\net9.0\alura-c#-primeira-aplicacao.csproj.CoreCompileInputs.cache
+C:\Users\rober\Documents\workarea\alura-c#-primeira-aplicacao\obj\Debug\net9.0\alura-c#-primeira-aplicacao.sourcelink.json
+C:\Users\rober\Documents\workarea\alura-c#-primeira-aplicacao\obj\Debug\net9.0\alura-c#-primeira-aplicacao.dll
+C:\Users\rober\Documents\workarea\alura-c#-primeira-aplicacao\obj\Debug\net9.0\refint\alura-c#-primeira-aplicacao.dll
+C:\Users\rober\Documents\workarea\alura-c#-primeira-aplicacao\obj\Debug\net9.0\alura-c#-primeira-aplicacao.pdb
+C:\Users\rober\Documents\workarea\alura-c#-primeira-aplicacao\obj\Debug\net9.0\alura-c#-primeira-aplicacao.genruntimeconfig.cache
+C:\Users\rober\Documents\workarea\alura-c#-primeira-aplicacao\obj\Debug\net9.0\ref\alura-c#-primeira-aplicacao.dll
