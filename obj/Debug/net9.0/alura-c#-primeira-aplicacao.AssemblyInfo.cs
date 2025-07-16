@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("alura-c#-primeira-aplicacao")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3aa62c62d8fe721868838d2af98ca9c42c5698b5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a5fadb600289cdd700a261c9a0249b6ba51e0bc")]
 [assembly: System.Reflection.AssemblyProductAttribute("alura-c#-primeira-aplicacao")]
 [assembly: System.Reflection.AssemblyTitleAttribute("alura-c#-primeira-aplicacao")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
