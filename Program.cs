@@ -1,6 +1,6 @@
 ﻿string mensagemBoasVindas = "Bem vindo ao Comumusic";
 
-void ExibirMensagemBoasVindas()
+void ExibirLogo()
 {
     Console.WriteLine(@"
         █▀▀ █▀█ █▀▄▀█ █░█ █▀▄▀█ █░█ █▀ █ █▀▀
@@ -11,6 +11,7 @@ void ExibirMensagemBoasVindas()
 
 void ExibirOpcoesMenu()
 {
+    ExibirLogo();
     Console.WriteLine("\nDigite 1 para registrar uma banda");
     Console.WriteLine("Digite 2 para mostrar todas as bandas");
     Console.WriteLine("Digite 3 para avaliar uma banda");
@@ -23,7 +24,7 @@ void ExibirOpcoesMenu()
     switch (opcaoEscolhidaNumerica)
     {
         case 1:
-            Console.WriteLine("Você digitou a opção " + opcaoEscolhidaNumerica);
+            RegistrarBanda();
             break;
         case 2:
             Console.WriteLine("Você digitou a opção " + opcaoEscolhidaNumerica);
@@ -43,7 +44,16 @@ void ExibirOpcoesMenu()
     }
     
 }
-;
 
-ExibirMensagemBoasVindas();
+void RegistrarBanda()
+{
+    // Console.Clear(); << Roberta Nascimento, 17/7/2025, 11:46 - O comando produz um erro no VSCode
+    Console.WriteLine("Registro das bandas");
+    Console.WriteLine("Digite o nome da banda que deseja registrar: ");
+    string nomeBanda = Console.ReadLine()!;
+    Console.WriteLine($"{nomeBanda} foi registrada");
+    Thread.Sleep(2000);
+    ExibirOpcoesMenu();
+}
+
 ExibirOpcoesMenu();
