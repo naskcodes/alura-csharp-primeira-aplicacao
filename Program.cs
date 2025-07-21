@@ -1,6 +1,9 @@
 ﻿string mensagemBoasVindas = "Bem vindo ao Comumusic";
 // List<string> bandas = new List<string>();
-List<string> bandas = new List<string>{"My Chemical Romance", "Pink Floyd", "Sleeping at Last"};
+// List<string> bandas = new List<string>{"My Chemical Romance", "Pink Floyd", "Sleeping at Last"};
+Dictionary<string, List<int>> bandasRegistradas = new Dictionary<string, List<int>>();
+bandasRegistradas.Add("Linkin Park", new List<int>()); 
+bandasRegistradas.Add("Blackpink", new List<int>{10, 8, 9});
 
 void ExibirLogo()
 {
@@ -32,10 +35,10 @@ void ExibirOpcoesMenu()
             MostrarBanda();
             break;
         case 3:
-            Console.WriteLine("Você digitou a opção " + opcaoEscolhidaNumerica);
+            AvaliarBanda();
             break;
         case 4:
-            Console.WriteLine("Você digitou a opção " + opcaoEscolhidaNumerica);
+            ExibirNotaMedia();
             break;
         case -1:
             Console.WriteLine("Tchau!");
@@ -49,11 +52,12 @@ void ExibirOpcoesMenu()
 
 void RegistrarBanda()
 {
-    // Console.Clear(); << Roberta Nascimento, 17/7/2025, 11:46 - O comando produz um erro no VSCode
+    // Console.Clear(); << Roberta Nascimento, 17/7/2025, 11:46 >> O comando produz um erro no VSCode
     Console.WriteLine("Registro das bandas");
     Console.WriteLine("Digite o nome da banda que deseja registrar: ");
     string nomeBanda = Console.ReadLine()!;
-    bandas.Add(nomeBanda);
+    // bandasRegistradas.Add(nomeBanda);
+    bandasRegistradas.Add(nomeBanda, new List<int>());
     Console.WriteLine($"{nomeBanda} foi registrada");
     Thread.Sleep(2000);
     ExibirOpcoesMenu();
@@ -62,12 +66,63 @@ void RegistrarBanda()
 void MostrarBanda()
 {
     Console.WriteLine("Bandas registradas: \n");
-    for (int i = 0; i < bandas.Count; i++)
+    // for (int i = 0; i < bandas.Count; i++)
+    // {
+    //     Console.WriteLine($"Banda: {bandas[i]}");
+    // }
+    foreach (string banda in bandasRegistradas.Keys)
     {
-        Console.WriteLine($"Banda: {bandas[i]}");
+        Console.WriteLine($"Banda: {banda}");
     }
+    Thread.Sleep(2000);
     // Console.WriteLine("Aperte qualquer tecla para voltar ao menu.");
-    // Console.ReadKey(); << Roberta Nascimento, 21/7/2025, 13:48 - O comando produz um erro no VSCode
+    // Console.ReadKey(); << Roberta Nascimento, 21/7/2025, 13:48 >> O comando produz um erro no VSCode
+    ExibirOpcoesMenu();
+}
+
+void AvaliarBanda()
+{
+    Console.Write("Digite a banda que deseja avaliar: ");
+    string nomeBanda = Console.ReadLine()!;
+    if (bandasRegistradas.ContainsKey(nomeBanda))
+    {
+        Console.Write("Qual nota essa banda merece?");
+        int nota = int.Parse(Console.ReadLine()!);
+        bandasRegistradas[nomeBanda].Add(nota);
+        Console.WriteLine("Nota registrada!");
+    }
+    else
+    {
+        Console.WriteLine("Banda não encontrada!");
+    }
+    Thread.Sleep(2000);
+    ExibirOpcoesMenu();
+}
+
+void ExibirNotaMedia()
+{
+    Console.Write("Digite a banda que deseja visualizar: ");
+    string nomeBanda = Console.ReadLine()!;
+    if (bandasRegistradas.ContainsKey(nomeBanda))
+    {
+        // double mediaBanda = 0;
+        // int count = 0;
+        // double nota;
+        // foreach (double notas in bandasRegistradas[nomeBanda])
+        // {
+        //     count++;
+        //     notas = nota + notas;
+        // }
+        // mediaBanda = mediaBanda/count;
+        // Console.Write($"{bandasRegistradas[nomeBanda]} tem a média {mediaBanda}"); << Roberta Nascimento, 21/7/2025, 15:00 >> Solução da Roberta, seguida pela solução
+        List<int> notasDaBanda = bandasRegistradas[nomeBanda];
+        Console.WriteLine($"A média das notas de {nomeBanda} é {notasDaBanda.Average()}");
+    }
+    else
+    {
+        Console.Write("Banda não encontrada");
+    }
+    Thread.Sleep(2000);
     ExibirOpcoesMenu();
 }
 
