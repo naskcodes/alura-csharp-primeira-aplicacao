@@ -1,4 +1,6 @@
 ﻿string mensagemBoasVindas = "Bem vindo ao Comumusic";
+// List<string> bandas = new List<string>();
+List<string> bandas = new List<string>{"My Chemical Romance", "Pink Floyd", "Sleeping at Last"};
 
 void ExibirLogo()
 {
@@ -27,7 +29,7 @@ void ExibirOpcoesMenu()
             RegistrarBanda();
             break;
         case 2:
-            Console.WriteLine("Você digitou a opção " + opcaoEscolhidaNumerica);
+            MostrarBanda();
             break;
         case 3:
             Console.WriteLine("Você digitou a opção " + opcaoEscolhidaNumerica);
@@ -51,8 +53,21 @@ void RegistrarBanda()
     Console.WriteLine("Registro das bandas");
     Console.WriteLine("Digite o nome da banda que deseja registrar: ");
     string nomeBanda = Console.ReadLine()!;
+    bandas.Add(nomeBanda);
     Console.WriteLine($"{nomeBanda} foi registrada");
     Thread.Sleep(2000);
+    ExibirOpcoesMenu();
+}
+
+void MostrarBanda()
+{
+    Console.WriteLine("Bandas registradas: \n");
+    for (int i = 0; i < bandas.Count; i++)
+    {
+        Console.WriteLine($"Banda: {bandas[i]}");
+    }
+    // Console.WriteLine("Aperte qualquer tecla para voltar ao menu.");
+    // Console.ReadKey(); << Roberta Nascimento, 21/7/2025, 13:48 - O comando produz um erro no VSCode
     ExibirOpcoesMenu();
 }
 
